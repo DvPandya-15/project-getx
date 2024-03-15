@@ -19,21 +19,29 @@ class TodoPage extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             Expanded(
-              child: ListView.builder(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                itemCount: todoController.TodoList.length,
-                itemBuilder: (context, i) {
-                  return Column(
-                    children: [
-                      SizedBox(height: 10), // Adjust the height as needed
-                      GetBuilder<TodoController>(
-                        builder: (_) => TodoTile(
-                          i: i,
-                          todo: todoController.TodoList[i],
-                        ),
-                      ),
-                    ],
-                  );
+              child: Obx(
+                () {
+                  if (todoController.isLoading.value) {
+                    return Center(child: CircularProgressIndicator());
+                  } else {
+                    return ListView.builder(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      itemCount: todoController.TodoList.length,
+                      itemBuilder: (context, i) {
+                        return Column(
+                          children: [
+                            SizedBox(height: 10), // Adjust the height as needed
+                            GetBuilder<TodoController>(
+                              builder: (_) => TodoTile(
+                                i: i,
+                                todo: todoController.TodoList[i],
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  }
                 },
               ),
             ),
