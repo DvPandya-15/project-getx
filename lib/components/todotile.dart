@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controller/todo_controller.dart';
-import 'package:getx/model/todo_model.dart';
+
+import '../controller/todo_controller.dart';
+import '../model/todo_model.dart';
 
 class TodoTile extends StatelessWidget {
   final TodoController todoController = Get.put(TodoController());
@@ -65,7 +66,7 @@ class TodoTile extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {
                             print("i..$i");
-                            todoController.deleteTodos(i);
+                            todoController.deleteTodo(i);
                             Get.back();
                           },
                           child: const Text("Delete"),

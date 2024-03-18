@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controller/todo_controller.dart';
+
+import '../controller/todo_controller.dart';
 
 class AddTodoButton extends StatelessWidget {
   final TextEditingController todoTitle = new TextEditingController();

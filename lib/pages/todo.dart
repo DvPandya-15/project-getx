@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/components/add_todo_button.dart';
-import 'package:getx/components/todotile.dart';
-import 'package:getx/controller/todo_controller.dart';
+
+import '../components/add_todo_button.dart';
+import '../components/todotile.dart';
+import '../controller/todo_controller.dart';
 
 class TodoPage extends StatelessWidget {
   TodoPage({Key? key}) : super(key: key);

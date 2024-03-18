@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:getx/pages/counter.dart';
-import 'package:getx/pages/todo.dart';
+
 import '../main.dart';
 import '../pages/about.dart';
 import '../pages/contact.dart';
+import '../pages/counter.dart';
+import '../pages/todo.dart';
 
 List<GetPage<dynamic>> allPages = [
   GetPage(name: '/', page: () => MyHomePage(title: 'Getx')),

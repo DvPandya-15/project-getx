@@ -1,7 +1,7 @@
+import 'package:Getx/components/languages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:getx/components/languages.dart';
 import 'components/route.dart';
 
 void main() {
@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
       locale: Locale('en'),
       fallbackLocale: Locale('en'),
       translations: Languages(),
-      title: 'Getx Demo',
+      title: 'Project Getx',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       getPages: allPages,
-      home: MyHomePage(title: 'Getx'),
+      home: MyHomePage(title: 'Project Getx'),
     );
   }
 }

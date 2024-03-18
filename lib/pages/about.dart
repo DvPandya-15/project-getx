@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/controller/about_controller.dart';
+
+import '../controller/about_controller.dart';
 
 class AboutPage extends StatelessWidget {
   final AboutController aboutController = Get.put(AboutController());
