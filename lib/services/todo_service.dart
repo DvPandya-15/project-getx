@@ -40,7 +40,7 @@ class TodoService {
       Uri.parse('https://65f0b190da8c6584131c484d.mockapi.io/todolist/$id'),
     );
     if (response.statusCode == 200) {
-      print("Todo Deleted!");
+      print("Todo Deleted! ${response.body}");
       TodoList.clear();
       getTodos();
     } else {

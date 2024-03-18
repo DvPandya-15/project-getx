@@ -34,7 +34,7 @@ class TodoPage extends StatelessWidget {
                             SizedBox(height: 10), // Adjust the height as needed
                             GetBuilder<TodoController>(
                               builder: (_) => TodoTile(
-                                i: i,
+                                i: int.parse(todoController.TodoList[i].id!),
                                 todo: todoController.TodoList[i],
                               ),
                             ),
